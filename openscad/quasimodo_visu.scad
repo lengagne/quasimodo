@@ -5,10 +5,20 @@ include <./modules.scad>;
 ep_axe= 5;
 
 color([1,0,0])
-import("barillet_1.stl");
+{
+translate([0,0,(-l/8)*echelle])    import("axe_barillet_1.stl");
+translate([0,0,(-l/4)*echelle])    import("barillet_1.stl");
+}
 
-import("axe_barillet_1.stl");
+translate([(120+20)*echelle,0,l/8*echelle])    color([0,1,0])
+{
+    import("axe_principal.stl");
+    translate([0,0,(-l/4-10)*echelle]) rotate([0,0,3.5]) import("engrenage_1_axe_2.stl");
+    
+    translate([0,0,-(-l/4-10)*echelle]) rotate([0,0,3.5]) import("engrenage_clic_1_axe_2.stl");
+}
 
+translate([0,0,(-l/2+25)*echelle]) cube([L*echelle,h*echelle,ep_cadre*echelle],center=true);
 
 
 //
