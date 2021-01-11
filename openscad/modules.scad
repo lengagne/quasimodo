@@ -2,12 +2,13 @@
 pi = 3.141592653589793238; 
 echelle = 0.5;
 ep_axe= 5;
+ep_roulement= 4;
 
 L = 990;
 l = 250;
 h = 300;
 
-ep_cadre = 10;
+ep_cadre = 14;
 jeu_axe = 0.1;
 
 
